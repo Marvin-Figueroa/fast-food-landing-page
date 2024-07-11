@@ -15,6 +15,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -93,4 +94,52 @@ a {
 .hero-section__subtitle {
   font-size: 2rem;
   font-weight: bold;
+}
+
+/* ------------------ About Section ----------------------- */
+
+.about-section {
+  color: var(--raisin-black);
+  padding: 12rem;
+}
+
+.about-section__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-bottom: 6rem;
+}
+
+.about-section__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-section__content-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-section__content-image {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.about-section__content-image img {
+  width: 70%;
+  height: 28rem;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.about-section__subtitle {
+  font-weight: bold;
+  color: var(--safety-orange);
+  margin-bottom: 2rem;
+}
+
+.about-section__text {
+  line-height: 1.5;
 }
