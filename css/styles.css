@@ -5,18 +5,22 @@
   --raisin-black: #222228ff;
 }
 
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
+  box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
 }
 
 li {
@@ -37,9 +41,10 @@ a {
 
 .nav {
   background-color: var(--white);
-  opacity: 0.9;
+  opacity: 0.7;
   position: absolute;
   width: 100%;
+  z-index: 10;
 }
 
 .nav__list {
@@ -59,4 +64,33 @@ a {
   &:active {
     color: var(--accent-orange);
   }
+}
+
+/* ---------------------------- Hero Section ---------------------- */
+
+.hero-section {
+  color: var(--white);
+  height: 50rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/image1_jcpygh.jpg");
+  background-position: bottom;
+  background-size: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  letter-spacing: 4px;
+}
+
+.hero-section__title {
+  margin: 0;
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+.hero-section__subtitle {
+  font-size: 2rem;
+  font-weight: bold;
 }
