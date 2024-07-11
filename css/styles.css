@@ -1,0 +1,15 @@
+:root {
+  --white: #fffefeff;
+  --safety-orange: #fe7b01ff;
+  --accent-orange: #e05d00;
+  --raisin-black: #222228ff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+}
