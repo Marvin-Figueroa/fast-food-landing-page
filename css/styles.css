@@ -2,6 +2,7 @@
   --white: #fffefeff;
   --safety-orange: #fe7b01ff;
   --accent-orange: #e05d00;
+  --rusty-brown: #734002;
   --raisin-black: #222228ff;
 }
 
@@ -142,4 +143,45 @@ a {
 
 .about-section__text {
   line-height: 1.5;
+}
+
+/* ----------------- CTA Banner Section ----------------------- */
+
+.cta-banner-section {
+  color: var(--white);
+  letter-spacing: 3px;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/image3_ulstmf.jpg");
+  background-position: center;
+  background-size: 100%;
+}
+
+.cta-banner-section__title {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-banner-section__subtitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 4rem;
+}
+
+.cta-banner-section__cta {
+  border-radius: 8px;
+  color: var(--white);
+  background-color: var(--safety-orange);
+  padding: 12px 50px;
+  font-weight: bold;
+  letter-spacing: initial;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-orange);
+  }
 }
