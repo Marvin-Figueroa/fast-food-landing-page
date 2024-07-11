@@ -13,3 +13,50 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Utility classes */
+
+.container {
+  max-width: 140rem;
+}
+
+/* ------------------- Navbar ---------------------------- */
+
+.nav {
+  background-color: var(--white);
+  opacity: 0.9;
+  position: absolute;
+  width: 100%;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  height: 60px;
+}
+
+.nav__link {
+  color: var(--safety-orange);
+  font-weight: bold;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--accent-orange);
+  }
+}
