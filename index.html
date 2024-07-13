@@ -14,28 +14,30 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
+    <header class="container">
       <nav class="nav">
-        <ul class="nav__list container">
-          <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
+        <ul class="nav__list container center-content">
+          <li class="nav__item"><a class="link" href="#">Home</a></li>
           <li class="nav__item">
-            <a class="nav__link" href="#about">Nosotros</a>
+            <a class="link" href="#about">Nosotros</a>
           </li>
-          <li class="nav__item"><a class="nav__link" href="#menu">Menu</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Contacto</a></li>
+          <li class="nav__item"><a class="link" href="#menu">Menu</a></li>
+          <li class="nav__item">
+            <a class="link" href="#contacto">Contacto</a>
+          </li>
         </ul>
       </nav>
     </header>
-    <main>
-      <section class="hero-section">
-        <h1 class="hero-section__title">Restaurante</h1>
-        <p class="hero-section__subtitle">Experimenta lo mejor en comida</p>
+    <main class="container">
+      <section class="hero-section container section">
+        <h1 class="title">Restaurante</h1>
+        <p class="subtitle">Experimenta lo mejor en comida</p>
       </section>
       <section id="about" class="about-section container">
-        <h2 class="about-section__title">Nosotros</h2>
+        <h2 class="title">Nosotros</h2>
         <div class="about-section__content">
           <div class="about-section__content-text">
-            <p class="about-section__subtitle">ESTE ES NUESTRO RESTAURANTE</p>
+            <p class="subtitle text-accent">ESTE ES NUESTRO RESTAURANTE</p>
             <p class="about-section__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
               ullam harum suscipit! Minus libero facilis eligendi accusamus
@@ -44,23 +46,20 @@
               reiciendis facilis voluptas doloribus maiores esse?
             </p>
           </div>
-          <figure class="about-section__content-image">
-            <img
-              src="https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/image2_fut2k2.jpg"
-              alt="An arm holding a hamburger"
-            />
-          </figure>
+          <img
+            class="about-section__content-image"
+            src="https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/image2_fut2k2.jpg"
+            alt="An arm holding a hamburger"
+          />
         </div>
       </section>
-      <section class="cta-banner-section">
-        <h2 class="cta-banner-section__title">LOS MEJORES PRODUCTOS</h2>
-        <p class="cta-banner-section__subtitle">
-          A tan solo un click de distancia!
-        </p>
-        <a href="#" class="cta-banner-section__cta">Ordenar Ahora</a>
+      <section class="cta-banner-section container">
+        <h2 class="title">LOS MEJORES PRODUCTOS</h2>
+        <p class="subtitle">A tan solo un click de distancia!</p>
+        <a href="#" class="cta">Ordenar&nbsp;Ahora</a>
       </section>
-      <section id="menu" class="menu-section">
-        <h2 class="menu-section__title">NUESTRO MENU</h2>
+      <section id="menu" class="menu-section container">
+        <h2 class="title">NUESTRO MENU</h2>
         <div class="menu-section__gallery">
           <article class="menu-section__gallery-item">
             <img
@@ -70,7 +69,7 @@
             />
             <div class="gallery-item-content">
               <h3 class="gallery-item-title">Basica</h3>
-              <a href="#" class="cta">Ordenar Ahora</a>
+              <a href="#" class="cta">Ordenar&nbsp;Ahora</a>
             </div>
           </article>
           <article class="menu-section__gallery-item">
@@ -81,7 +80,7 @@
             />
             <div class="gallery-item-content">
               <h3 class="gallery-item-title">Basica 2x1</h3>
-              <a href="#" class="cta">Ordenar Ahora</a>
+              <a href="#" class="cta">Ordenar&nbsp;Ahora</a>
             </div>
           </article>
           <article class="menu-section__gallery-item">
@@ -92,7 +91,7 @@
             />
             <div class="gallery-item-content">
               <h3 class="gallery-item-title">Extra Vegetales</h3>
-              <a href="" class="cta">Ordenar Ahora</a>
+              <a href="" class="cta">Ordenar&nbsp;Ahora</a>
             </div>
           </article>
           <article class="menu-section__gallery-item">
@@ -103,7 +102,7 @@
             />
             <div class="gallery-item-content">
               <h3 class="gallery-item-title">Doble Carne</h3>
-              <a href="#" class="cta">Ordenar Ahora</a>
+              <a href="#" class="cta">Ordenar&nbsp;Ahora</a>
             </div>
           </article>
           <article class="menu-section__gallery-item">
@@ -114,7 +113,7 @@
             />
             <div class="gallery-item-content">
               <h3 class="gallery-item-title">Parrillera</h3>
-              <a href="#" class="cta">Ordenar Ahora</a>
+              <a href="#" class="cta">Ordenar&nbsp;Ahora</a>
             </div>
           </article>
           <article class="menu-section__gallery-item">
@@ -125,11 +124,93 @@
             />
             <div class="gallery-item-content">
               <h3 class="gallery-item-title">Premium</h3>
-              <a href="#" class="cta">Ordenar Ahora</a>
+              <a href="#" class="cta">Ordenar&nbsp;Ahora</a>
             </div>
           </article>
         </div>
       </section>
     </main>
+    <footer id="contacto" class="footer-section container">
+      <div class="footer-section__content">
+        <div class="footer-section__contact">
+          <h2 class="subtitle">Contactanos</h2>
+          <p>
+            <span class="text-accent">Dirección:</span>
+            Santa Ana, Plaza Kristal, El Savador
+          </p>
+          <p><span class="text-accent">Teléfono:</span> +503 2424-2424</p>
+          <p>
+            <span class="text-accent">Email:</span>
+            fast@food.com
+          </p>
+          <div class="footer-section__social">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="128"
+              height="128"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.792C0 19.506.494 20 1.104 20h9.578v-7.745H8.076V9.237h2.606V7.01c0-2.584 1.578-3.99 3.883-3.99c1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.596-1.496 1.47v1.927h2.989l-.39 3.018h-2.6V20h5.097c.61 0 1.104-.494 1.104-1.104V1.104C20 .494 19.506 0 18.896 0"
+              />
+            </svg>
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="128"
+              height="128"
+              viewBox="0 0 1536 1536"
+            >
+              <path
+                fill="currentColor"
+                d="M1024 768q0-106-75-181t-181-75t-181 75t-75 181t75 181t181 75t181-75t75-181m138 0q0 164-115 279t-279 115t-279-115t-115-279t115-279t279-115t279 115t115 279m108-410q0 38-27 65t-65 27t-65-27t-27-65t27-65t65-27t65 27t27 65M768 138q-7 0-76.5-.5t-105.5 0t-96.5 3t-103 10T315 169q-50 20-88 58t-58 88q-11 29-18.5 71.5t-10 103t-3 96.5t0 105.5t.5 76.5t-.5 76.5t0 105.5t3 96.5t10 103T169 1221q20 50 58 88t88 58q29 11 71.5 18.5t103 10t96.5 3t105.5 0t76.5-.5t76.5.5t105.5 0t96.5-3t103-10t71.5-18.5q50-20 88-58t58-88q11-29 18.5-71.5t10-103t3-96.5t0-105.5t-.5-76.5t.5-76.5t0-105.5t-3-96.5t-10-103T1367 315q-20-50-58-88t-88-58q-29-11-71.5-18.5t-103-10t-96.5-3t-105.5 0t-76.5.5m768 630q0 229-5 317q-10 208-124 322t-322 124q-88 5-317 5t-317-5q-208-10-322-124T5 1085q-5-88-5-317t5-317q10-208 124-322T451 5q88-5 317-5t317 5q208 10 322 124t124 322q5 88 5 317"
+              />
+            </svg>
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="122.88"
+              height="128"
+              viewBox="0 0 1536 1600"
+            >
+              <path
+                fill="currentColor"
+                d="M985 878q13 0 97.5 44t89.5 53q2 5 2 15q0 33-17 76q-16 39-71 65.5T984 1158q-57 0-190-62q-98-45-170-118T476 793q-72-107-71-194v-8q3-91 74-158q24-22 52-22q6 0 18 1.5t19 1.5q19 0 26.5 6.5T610 448q8 20 33 88t25 75q0 21-34.5 57.5T599 715q0 7 5 15q34 73 102 137q56 53 151 101q12 7 22 7q15 0 54-48.5t52-48.5m-203 530q127 0 243.5-50t200.5-134t134-200.5t50-243.5t-50-243.5T1226 336t-200.5-134T782 152t-243.5 50T338 336T204 536.5T154 780q0 203 120 368l-79 233l242-77q158 104 345 104m0-1382q153 0 292.5 60T1315 247t161 240.5t60 292.5t-60 292.5t-161 240.5t-240.5 161t-292.5 60q-195 0-365-94L0 1574l136-405Q28 991 28 780q0-153 60-292.5T249 247T489.5 86T782 26"
+              />
+            </svg>
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="128"
+              height="128"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584l-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="footer-section__location">
+          <h2 class="subtitle">Visítanos</h2>
+          <iframe
+            class="footer-section__location-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61948.774888862565!2d-89.60537555348769!3d13.970600424053558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f62e88de0a84fd1%3A0xd6716072a9b82283!2sPlaza%20Kristal!5e0!3m2!1ses!2ssv!4v1720828290132!5m2!1ses!2ssv"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <p class="footer-section__legend">
+        Made with 💛 by
+        <span class="text-accent">Marvin Figueroa</span>
+        &copy; 2024
+      </p>
+    </footer>
   </body>
 </html>

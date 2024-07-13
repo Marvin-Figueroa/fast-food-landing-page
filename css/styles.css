@@ -4,6 +4,13 @@
   --accent-orange: #e05d00;
   --rusty-brown: #734002;
   --raisin-black: #222228ff;
+
+  --letter-spacing: 4px;
+  --border-radius: 8px;
+  --section-padding: 10rem;
+  --title-text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  --image-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 5px;
+  --dark-overlay: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 
 *,
@@ -25,39 +32,33 @@ body {
   font-size: 1.6rem;
 }
 
-li {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* Utility classes */
+/* -------------------- Utility classes -------------------*/
 
 .container {
-  max-width: 140rem;
+  max-width: 200rem;
+  margin: 0 auto;
 }
 
-/* ------------------- Navbar ---------------------------- */
-
-.nav {
-  background-color: var(--white);
-  opacity: 0.7;
-  position: absolute;
-  width: 100%;
-  z-index: 10;
+.title,
+.subtitle {
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
 }
 
-.nav__list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
-  height: 60px;
+.title {
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-shadow: var(--title-text-shadow);
 }
 
-.nav__link {
+.subtitle {
+  font-size: 2.5rem;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
   color: var(--safety-orange);
   font-weight: bold;
 
@@ -68,111 +69,11 @@ a {
   }
 }
 
-/* ---------------------------- Hero Section ---------------------- */
-
-.hero-section {
-  color: var(--white);
-  height: 50rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/image1_jcpygh.jpg");
-  background-position: bottom;
-  background-size: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
-  letter-spacing: 4px;
-}
-
-.hero-section__title {
-  margin: 0;
-  font-size: 5rem;
-  text-transform: uppercase;
-}
-
-.hero-section__subtitle {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-/* ------------------ About Section ----------------------- */
-
-.about-section {
-  color: var(--raisin-black);
-  padding: 12rem;
-}
-
-.about-section__title {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 3rem;
-  margin-bottom: 6rem;
-}
-
-.about-section__content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.about-section__content-text {
-  flex: 1;
-  text-align: left;
-}
-
-.about-section__content-image {
-  flex: 1;
-  display: flex;
-  justify-content: end;
-}
-
-.about-section__content-image img {
-  width: 70%;
-  height: 28rem;
-  object-fit: cover;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.about-section__subtitle {
-  font-weight: bold;
-  color: var(--safety-orange);
-  margin-bottom: 2rem;
-}
-
-.about-section__text {
-  line-height: 1.5;
-}
-
-/* ----------------- CTA Banner Section ----------------------- */
-
-.cta-banner-section {
-  color: var(--white);
-  letter-spacing: 3px;
-  height: 40rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/image3_ulstmf.jpg");
-  background-position: center;
-  background-size: 100%;
-}
-
-.cta-banner-section__title {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
-}
-
-.cta-banner-section__subtitle {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 4rem;
-}
-
-.cta-banner-section__cta {
+.cta {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-decoration: none;
   border-radius: 8px;
   color: var(--white);
   background-color: var(--safety-orange);
@@ -186,34 +87,130 @@ a {
   }
 }
 
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-accent {
+  color: var(--safety-orange);
+}
+
+/* ------------------- Navbar ---------------------------- */
+
+.nav {
+  background-color: var(--white);
+  opacity: 0.95;
+  position: fixed;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  z-index: 10;
+}
+
+.nav__list {
+  gap: 6rem;
+  height: 60px;
+  list-style-type: none;
+}
+
+/* ---------------------------- Hero Section ---------------------- */
+
+.hero-section {
+  color: var(--white);
+  height: 60rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--dark-overlay),
+    url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/image1_jcpygh.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  letter-spacing: var(--letter-spacing);
+}
+
+/* ------------------ About Section ----------------------- */
+
+.about-section {
+  padding: var(--section-padding);
+  color: var(--raisin-black);
+
+  .title {
+    margin-bottom: 5rem;
+  }
+}
+
+.about-section__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-section__content-text {
+  flex: 2;
+  text-align: left;
+
+  .subtitle {
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+}
+
+.about-section__content-image {
+  flex: 1;
+  object-fit: cover;
+  box-shadow: var(--image-box-shadow);
+}
+
+.about-section__text {
+  line-height: 1.5;
+}
+
+/* ----------------- CTA Banner Section ----------------------- */
+
+.cta-banner-section {
+  color: var(--white);
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  background: var(--dark-overlay),
+    url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/image3_ulstmf.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 /* -------------------- Menu Section ------------------------ */
 
 .menu-section {
-  padding: 12rem;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
+  padding: var(--section-padding);
 
-.menu-section__title {
-  text-align: center;
+  .title {
+    margin-bottom: 5rem;
+  }
 }
 
 .menu-section__gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3rem 4rem;
+  gap: 6rem 8rem;
 }
 
 .menu-section__gallery-item {
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 5px;
+  box-shadow: var(--image-box-shadow);
   position: relative;
   display: flex;
   flex-direction: column;
 
   &:hover .gallery-item-content {
     opacity: 1;
-    pointer-events: all;
   }
 }
 
@@ -245,16 +242,259 @@ a {
   text-align: center;
 }
 
-.cta {
-  border-radius: 8px;
-  color: var(--white);
-  background-color: var(--safety-orange);
-  padding: 12px 50px;
-  font-weight: bold;
-  letter-spacing: initial;
+/* ------------------ Footer Section -------------------------- */
 
-  &:hover,
-  &:focus {
-    background-color: var(--accent-orange);
+.footer-section {
+  background-color: var(--rusty-brown);
+  color: var(--white);
+}
+
+.footer-section__content {
+  padding: var(--section-padding);
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section__contact {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+
+  .subtitle {
+    text-align: left;
+  }
+}
+
+.footer-section__social {
+  display: flex;
+  justify-content: left;
+  gap: 3rem;
+  align-items: center;
+}
+
+.footer-section__location {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .subtitle {
+    text-align: left;
+  }
+}
+
+.footer-section__location-map {
+  height: 25rem;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--white);
+  transition: fill 0.3s ease;
+}
+
+.icon:hover {
+  fill: var(--accent-orange);
+  color: var(--accent-orange);
+  cursor: pointer;
+}
+
+.footer-section__legend {
+  text-align: center;
+  font-size: 120%;
+  padding-bottom: 4rem;
+}
+
+/* ======================== Media Querys ============================ */
+
+@media (min-width: 1024px) {
+  .nav__list {
+    gap: 10rem;
+  }
+
+  .about-section__content {
+    gap: 10rem;
+  }
+
+  .about-section__content-image {
+    height: 250px;
+  }
+}
+
+/* ================================================================== */
+
+@media (min-width: 851px) and (max-width: 1023px) {
+  .about-section,
+  .menu-section,
+  .footer-section__content {
+    padding: calc(var(--section-padding) - 5rem);
+  }
+
+  .menu-section__gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .about-section__content {
+    gap: 3.5rem;
+  }
+
+  .about-section__content-image {
+    height: 200px;
+  }
+
+  .gallery-item-content {
+    opacity: 1;
+  }
+}
+
+/* ================================================================== */
+
+@media (min-width: 600px) and (max-width: 850px) {
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .subtitle {
+    font-size: 2.5rem;
+  }
+
+  .about-section,
+  .menu-section,
+  .footer-section__content {
+    padding: calc(var(--section-padding) - 6rem);
+  }
+
+  .nav__list {
+    gap: 5rem;
+  }
+
+  .about-section__content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+  }
+
+  .about-section__content-text {
+    text-align: center;
+
+    .subtitle {
+      text-align: center;
+    }
+  }
+
+  .about-section__content-image {
+    width: 500px;
+    max-height: 250px;
+  }
+
+  .menu-section__gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 4rem;
+  }
+
+  .menu-section__gallery {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4rem;
+  }
+
+  .gallery-item-content {
+    opacity: 1;
+  }
+
+  .footer-section__content {
+    .subtitle {
+      text-align: center;
+    }
+
+    gap: 3rem;
+  }
+}
+
+/* ================================================================== */
+
+@media (max-width: 599px) {
+  .nav__list {
+    gap: 3rem;
+  }
+
+  .about-section,
+  .menu-section,
+  .footer-section__content {
+    padding: calc(var(--section-padding) - 6rem);
+  }
+
+  body {
+    font-size: 1.4rem;
+  }
+
+  .title {
+    font-size: 2.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+  }
+
+  .hero-section {
+    height: 40rem;
+    padding: calc(var(--section-padding) - 8rem);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+  }
+
+  .about-section__content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+  }
+
+  .about-section__content-image {
+    width: 300px;
+    max-height: 200px;
+  }
+
+  .about-section__content-text {
+    text-align: center;
+
+    .subtitle {
+      text-align: center;
+    }
+  }
+
+  .menu-section__gallery {
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+  }
+
+  .gallery-item-content {
+    opacity: 1;
+  }
+
+  .footer-section__content {
+    flex-direction: column;
+    gap: 5rem;
+
+    .subtitle {
+      text-align: center;
+    }
+  }
+
+  .footer-section__contact {
+    text-align: center;
+    gap: 4rem;
+  }
+
+  .footer-section__social {
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .footer-section__legend {
+    font-size: 100%;
   }
 }
