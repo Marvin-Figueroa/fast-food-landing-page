@@ -124,13 +124,43 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  background: var(--dark-overlay),
-    url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/image1_jcpygh.jpg");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
   letter-spacing: var(--letter-spacing);
+}
+
+/* Imagen para pantallas medianas */
+@media (max-width: 638px) {
+  .hero-section {
+    background-image: var(--dark-overlay),
+      url("../assets/images/hero-banner_w_638.jpg");
+  }
+}
+
+/* Imagen para pantallas intermedias */
+@media (min-width: 639px) and (max-width: 876px) {
+  .hero-section {
+    background-image: var(--dark-overlay),
+      url("../assets/images/hero-banner_w_876.jpg");
+  }
+}
+
+/* Imagen para pantallas grandes */
+@media (min-width: 877px) and (max-width: 1082px) {
+  .hero-section {
+    background-image: var(--dark-overlay),
+      url("../assets/images/hero-banner_w_1262.jpg");
+  }
+}
+
+/* Imagen para pantallas extra grandes */
+@media (min-width: 1083px) {
+  .hero-section {
+    background-image: var(--dark-overlay),
+      url("../assets/images/hero-banner.jpg");
+  }
 }
 
 /* ------------------ About Section ----------------------- */
@@ -180,13 +210,50 @@ body {
   justify-content: center;
   gap: 2rem;
   align-items: center;
-  background: var(--dark-overlay),
-    url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/image3_ulstmf.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+/* Imagen más pequeña para pantallas pequeñas */
+@media (max-width: 400px) {
+  .cta-banner-section {
+    background-image: var(--dark-overlay),
+      url("../assets/images/cta-banner_w_714.jpg");
+  }
+}
+
+/* Imagen para pantallas medianas */
+@media (min-width: 401px) and (max-width: 714px) {
+  .cta-banner-section {
+    background-image: var(--dark-overlay),
+      url("../assets/images/cta-banner_w_944.jpg");
+  }
+}
+
+/* Imagen para pantallas intermedias */
+@media (min-width: 715px) and (max-width: 944px) {
+  .cta-banner-section {
+    background-image: var(--dark-overlay),
+      url("../assets/images/cta-banner_w_1183.jpg");
+  }
+}
+
+/* Imagen para pantallas grandes */
+@media (min-width: 945px) and (max-width: 1183px) {
+  .cta-banner-section {
+    background-image: var(--dark-overlay),
+      url("../assets/images/cta-banner_w_1280.jpg");
+  }
+}
+
+/* Imagen más grande para pantallas muy grandes */
+@media (min-width: 1184px) {
+  .cta-banner-section {
+    background-image: var(--dark-overlay),
+      url("../assets/images/cta-banner.jpg");
+  }
+}
 /* -------------------- Menu Section ------------------------ */
 
 .menu-section {
@@ -308,7 +375,7 @@ body {
   padding-bottom: 4rem;
 }
 
-/* ======================== Media Querys ============================ */
+/* ======================== Media Queries ============================ */
 
 @media (min-width: 1024px) {
   .nav__list {
